@@ -1,43 +1,52 @@
-📦 Product Recommendation System using Collaborative Filtering
-
-This project builds a Product Recommendation System using user–item collaborative filtering.
+## Product Recommendation System using Collaborative Filtering
+This project builds a Product Recommendation System using user–item collaborative filtering.  
 The model analyzes historical user ratings to find similar users and similar products using cosine similarity, and then recommends the top items a user is most likely to purchase.
 
-Note: Due to file size limits, the full reviews.csv dataset is not included in this repository.
-You can download the complete dataset from the original source: https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
+---
 
-🚀 Features
-Data preprocessing & building user–item rating matrix
-Cosine similarity for item–item recommendations
-Fetching top-N similar products
-Train–test split to evaluate recommendation quality
-Easy-to-understand implementation suitable for beginners
+## Dataset
+Note: Due to file size limits, the full `reviews.csv` dataset is not included in this repository.  
+You can download the complete dataset from the original source:  
+https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
 
-🧠 How It Works (Quick Summary)
-Load user–product ratings data
-Create a pivot table (rows = users, columns = items)
-Replace missing values with zero
-Use cosine similarity to compute similarity between products
-For a given product, return top 10 most similar products
-Split the data into train/test for evaluating recommendation accuracy
+---
 
-📊 Technologies Used
-Python
-Pandas
-NumPy
-Scikit-Learn (cosine similarity)
-Google Colab
+## Features
+- Data preprocessing & building a user–item rating matrix  
+- Cosine similarity calculation for item–item recommendations  
+- Fetching top-N similar products  
+- Train–test split to evaluate recommendation quality  
+- Easy-to-understand implementation using Python + Pandas + Scikit-Learn  
 
-📘 How to Use
-Clone the repository
-Add your reviews.csv (or a smaller sample file) into the repository
-Open the notebook in Colab
-Run each cell to generate recommendations
+---
 
-📁 Dataset Source
-Amazon Review Dataset – Nick McAuley (UCSD)
-(Available publicly for research use)
+## Approach
+1. Load and clean the review dataset  
+2. Build user-item ratings pivot table  
+3. Apply cosine similarity to compute similarity between items  
+4. Build a function to recommend top-N similar products  
+5. Evaluate the recommendation quality  
 
-👩‍💻 Author
-Gitika Jain
-Data Analyst | Data Scientist | SQL | Python | Machine Learning
+---
+
+## Project Structure
+├─ Product_recommendation_collab_filtering.ipynb
+├─ README.md
+└─ Reviews_sample.csv
+
+---
+
+## Technologies Used
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-Learn  
+- Google Colab  
+
+---
+
+## How to Run
+1. Clone this repository  
+2. Install dependencies  
+3. Open the Jupyter notebook  
+4. Run all cells  
