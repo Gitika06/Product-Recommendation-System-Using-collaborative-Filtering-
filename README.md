@@ -1,52 +1,82 @@
-## Product Recommendation System using Collaborative Filtering
-This project builds a Product Recommendation System using user–item collaborative filtering.  
-The model analyzes historical user ratings to find similar users and similar products using cosine similarity, and then recommends the top items a user is most likely to purchase.
+#Product Recommendation System (Item–Item Collaborative Filtering)
+This project builds a basic product recommendation engine using item–item collaborative filtering.  
+It demonstrates my ability to work with user behavior data, create similarity-based models, and design an end-to-end data pipeline for identifying products that are most similar or frequently co-rated by users.
+
+---
+
+## Project Objective
+To recommend the top-N similar products for any given product by analyzing user–item interactions.  
+The model uses historical rating patterns to identify items that tend to be liked by similar users.
 
 ---
 
 ## Dataset
-Note: Due to file size limits, the full `reviews.csv` dataset is not included in this repository.  
-You can download the complete dataset from the original source:  
-https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
+A small sample dataset (`Reviews_sample.csv`) is included for demonstration.  
+It contains:
+- User IDs  
+- Product IDs  
+- Ratings  
+- Basic metadata  
+
+The dataset reflects typical challenges in recommendation tasks such as sparsity and variable rating behavior.
 
 ---
 
-## Features
-- Data preprocessing & building a user–item rating matrix  
-- Cosine similarity calculation for item–item recommendations  
-- Fetching top-N similar products  
-- Train–test split to evaluate recommendation quality  
-- Easy-to-understand implementation using Python + Pandas + Scikit-Learn  
+## End-to-End Workflow
+### **1. Data Preparation**
+- Loading user–item rating data  
+- Handling missing values  
+- Creating a cleaned interaction matrix  
+- Building a pivot table (rows: users, columns: products)  
 
----
+### **2. Constructing User–Item Matrix**
+A sparse matrix is generated where each cell represents a user's rating for a product.  
+This is used for similarity computations.
 
-## Approach
-1. Load and clean the review dataset  
-2. Build user-item ratings pivot table  
-3. Apply cosine similarity to compute similarity between items  
-4. Build a function to recommend top-N similar products  
-5. Evaluate the recommendation quality  
+### **3. Similarity Computation**
+- Item–item similarity is calculated using **cosine similarity**  
+- Similarity matrix is used to identify products with the highest similarity scores  
+
+### **4. Recommendation Generation**
+- For a given product, retrieve top-N similar products  
+- Filter out items with insufficient interaction  
+- Provide ranked recommendations  
+
+### **5. Evaluation**
+- Exploratory checks on similarity values  
+- Manual validation of sample recommendations  
+This project focuses on demonstrating conceptual clarity, not accuracy benchmarking.
 
 ---
 
 ## Project Structure
-├─ Product_recommendation_collab_filtering.ipynb
-├─ README.md
-└─ Reviews_sample.csv
+├── Product_recommendation_collab_filtering.ipynb
+├── Reviews_sample.csv
+└── README.md
 
 ---
 
-## Technologies Used
+## Technologies & Skills Demonstrated
+
+### **Languages & Libraries**
 - Python  
 - Pandas  
 - NumPy  
 - Scikit-Learn  
 - Google Colab  
 
+### **Core Data Skills**
+- Working with sparse matrices  
+- Data preprocessing  
+- Similarity computation  
+- Analytical reasoning  
+- Building reusable functions  
+- Interpreting model outputs  
+
 ---
 
-## How to Run
+## How to Run This Project
 1. Clone this repository  
-2. Install dependencies  
-3. Open Google Colab  
-4. Run all cells  
+2. Install required Python libraries  
+3. Open the notebook in Jupyter  
+4. Run all cells sequentially
