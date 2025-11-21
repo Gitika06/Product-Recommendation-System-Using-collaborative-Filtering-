@@ -1,4 +1,5 @@
-#Product Recommendation System (Item–Item Collaborative Filtering)
+## Product Recommendation System (Item–Item Collaborative Filtering)
+
 This project builds a basic product recommendation engine using item–item collaborative filtering.  
 It demonstrates my ability to work with user behavior data, create similarity-based models, and design an end-to-end data pipeline for identifying products that are most similar or frequently co-rated by users.
 
