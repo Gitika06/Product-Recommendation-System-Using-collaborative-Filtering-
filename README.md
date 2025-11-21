@@ -48,5 +48,5 @@ https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
 ## How to Run
 1. Clone this repository  
 2. Install dependencies  
-3. Open the Jupyter notebook  
+3. Open Google Colab  
 4. Run all cells  
